@@ -18,7 +18,7 @@ console.log("Last update " + lastUpdate);
         <div className={styles.container}>
             <Grid container spacing={3} justify="center">
 
-                <Grid item component={Card} xs={13} md={3} className={cx(styles.card,styles.infected) } >
+                <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.infected) } >
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
                             INFECTED
@@ -40,7 +40,7 @@ console.log("Last update " + lastUpdate);
         </Typography>
                 </Grid>
 
-                <Grid item component={Card} xs={13} md={3} className={cx(styles.card,styles.recovered) }  >
+                <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.recovered) }  >
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
                             RECOVERED
@@ -62,7 +62,7 @@ console.log("Last update " + lastUpdate);
         </Typography>
                 </Grid>
 
-                <Grid item component={Card} xs={13} md={3} className={cx(styles.card,styles.deaths) } >
+                <Grid item component={Card} xs={12} md={3} className={cx(styles.card,styles.deaths) } >
                     <CardContent>
                         <Typography color="textSecondary" gutterBottom>
                             Deaths

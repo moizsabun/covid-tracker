@@ -24,26 +24,38 @@ import {fecthData} from "./api";
 class App extends Component{
     state = {
         data : {},
+        country: '',
     }
+
+
 
     async componentDidMount()
     {
         const fetcheddata = await fecthData();
         this.setState( {data: fetcheddata});
-        console.log(fetcheddata);
+       
     }
 
+
+    handleCountryChange =async(country) => {
+        const fetcheddata = await fecthData(country);
+        console.log(country)
+        this.setState( {data: fetcheddata ,country : country});
+        console.log (fetcheddata);
+
+    }
     render() {
-        const {data} = this.state;
+        const {data,country} = this.state;
+        console.log({data});
     return (
        
         <div className={styles.container}> 
             <Cards data={data}>
                 
             </Cards>
-<CountryPicker></CountryPicker>
+<CountryPicker handleCountryChange = {this.handleCountryChange}></CountryPicker>
 
-            <Charts>
+            <Charts data={data} country={country}>
 
             </Charts>
         </div>
